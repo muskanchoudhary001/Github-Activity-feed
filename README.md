@@ -25,7 +25,7 @@ Built with **Node.js, Socket.io, Tailwind CSS, and GitHub API**.
 
 ## 📂 Project Structure
 
-- github-activity-feed/ 
+- github-activity-feed/
 - │── public/
 - │├── index.html
 - │ └── css/style.css
@@ -46,10 +46,5 @@ node src/index.js
 
 Then visit 👉 http://localhost:3000
 ```
----
-
-## 📜 License
-
-MIT
 
 ---
