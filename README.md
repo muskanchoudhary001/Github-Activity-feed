@@ -47,9 +47,3 @@ node src/index.js
 Then visit 👉 http://localhost:3000
 ```
 ---
-
-## 📜 License
-
-MIT
-
----
