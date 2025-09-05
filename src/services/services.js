@@ -1,10 +1,10 @@
-const axios = require("axios")
-const { GITHUB_USERNAME } = require("../config")
+import axios from 'axios'
+import { GITHUB_USERNAME } from "../config.js"
 
 const GITHUB_API_URL = `https://api.github.com/users/${GITHUB_USERNAME}/events`
 
 
-async function fetchGithubActivity() {
+export async function fetchGithubActivity() {
     try {
         const response = await axios.get(GITHUB_API_URL)
         return response.data
@@ -15,4 +15,3 @@ async function fetchGithubActivity() {
 
 }
 
-module.exports = { fetchGithubActivity }

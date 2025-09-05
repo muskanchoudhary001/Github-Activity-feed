@@ -1,6 +1,6 @@
-require("dotenv").config()
+import dotenv from "dotenv";
 
-module.exports = {
-    PORT: process.env.PORT || 5000,
-    GITHUB_USERNAME: process.env.GITHUB_USERNAME || "muskanchoudhary001"
-}
+dotenv.config();
+
+export const PORT = process.env.PORT || 5000;
+export const GITHUB_USERNAME = process.env.GITHUB_USERNAME || "muskanchoudhary001";

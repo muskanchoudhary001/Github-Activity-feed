@@ -2,10 +2,12 @@
   "name": "github-activity-feed",
   "version": "1.0.0",
   "description": "Real-Time GitHub Activity Feed with Node.js and Socket.io",
-  "main": "index.js",
+  "main": "src/index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --watch ./src/index.js"
+    "start": "node src/index.js",
+    "build:css": "tailwindcss -i ./src/input.css -o ./public/output.css --minify",
+    "dev:css": "tailwindcss -i ./src/input.css -o ./public/output.css --watch"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +18,10 @@
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
     "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.12"
   }
 }

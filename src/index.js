@@ -1,8 +1,8 @@
 import express from 'express'
 import http from 'http'
 import { Server } from 'socket.io'
-import { fetchGithubActivity } from './services/services'
-import { PORT, GITHUB_USERNAME } from './config'
+import { fetchGithubActivity } from './services/services.js'
+import { PORT, GITHUB_USERNAME } from './config.js'
 
 
 const app = express()

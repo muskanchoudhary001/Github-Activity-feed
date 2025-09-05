@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Activity Feed</title>
+  <link href="/css/style.css" rel="stylesheet"> <!-- compiled Tailwind CSS -->
+</head>
+<body class="font-sans bg-gray-100 p-5">
+  <h1 class="text-center text-2xl font-bold mb-5">GitHub Activity Feed</h1>
+
+  <div id="loading" class="text-center text-gray-600">Loading...</div>
+  
+  <ul id="feed" class="space-y-3"></ul>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+    const feed = document.getElementById('feed');
+    const loading = document.getElementById('loading');
+
+    socket.on('github activity', (data) => {
+      loading.style.display = 'none';
+      feed.innerHTML = '';
+      data.forEach(event => {
+        console.log(event);
+        const li = document.createElement('li');
+        li.className = "bg-white p-4 border border-gray-300 rounded shadow-sm";
+        li.textContent = `${event.type} at ${event.repo.name} (Created at ${event.created_at}, Commit Message: ${event.payload.commits && event.payload.commits.length > 0 ? event.payload.commits[0].message : 'No commit message'})`;
+        feed.appendChild(li);
+      });
+    });
+  </script>
+</body>
+</html>
