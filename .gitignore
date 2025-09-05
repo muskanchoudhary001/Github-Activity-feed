@@ -129,5 +129,14 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-node_modules
+
+ 
+backend/dist
+backend/node_modules
+
 .env
+
+
+# Vite / React / Vue / Angular build
+frontend/dist
+frontend/node_modules
