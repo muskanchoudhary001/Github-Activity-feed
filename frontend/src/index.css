@@ -1,8 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 
-body {
-  @apply bg-gray-900 text-white;
+ /* index.css or App.css */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #0d1117; /* match your dark theme */
 }
